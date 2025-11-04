@@ -71,8 +71,4 @@ def handle_collisions():
                     a.handle_collision(group, b)
                     b.handle_collision(group, a)
 
-def half_size(o):
-    left, bottom, right, top = o.get_bb()
-    cx = (left + right) / 2
-    cy = (bottom + top) / 2
-    return cx, cy
+
