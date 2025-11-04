@@ -35,6 +35,7 @@ class Zombie:
         self.frame = random.randint(0, 9)
         self.dir = random.choice([-1,1])
         self.hit = 0
+        self.size = 200
 
     def get_bb(self):
         return self.x - 100, self.y - 100, self.x + 100, self.y + 100
@@ -64,6 +65,9 @@ class Zombie:
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
             self.hit += 1
+            if self.hit = 1:
+                self.size *= 0.5
+
             if self.hit > 1:
                 game_world.remove_object(self)
 
