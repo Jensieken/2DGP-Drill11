@@ -62,4 +62,9 @@ class Zombie:
 
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
-            game_world.half_size(self)
+            if self.dir < 0:
+                Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y, 100, 100)
+            else:
+                Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y, 100, 100)
+
+
