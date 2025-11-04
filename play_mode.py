@@ -32,9 +32,9 @@ def init():
     game_world.add_object(boy, 1)
 
     zombie = Zombie()
+    game_world.add_object(zombie, 1)
 
-    zombies = [Zombie() for _ in range(4)]
-    game_world.add_objects(zombies, 1)
+
 
     game_world.add_collision_pair('zombie:ball', zombie, None)
 
