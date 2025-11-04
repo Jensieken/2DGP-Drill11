@@ -1,3 +1,5 @@
+from pico2d import close_canvas
+
 world = [[] for _ in range(4)]
 
 def add_object(o, depth = 0):
