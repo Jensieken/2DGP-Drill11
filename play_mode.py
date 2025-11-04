@@ -35,6 +35,8 @@ def init():
     game_world.add_object(zombie, 1)
 
     game_world.add_collision_pair('zombie:ball', zombie, None)
+    game_world.add_collision_pair('boy:zombie', boy, None)
+    game_world.add_collision_pair('zombie:bay', None, zombie)
 
     global balls
     balls = [Ball(random.randint(100, 1600-100), 60, 0) for _ in range(30)]
