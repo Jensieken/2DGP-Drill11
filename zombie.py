@@ -19,6 +19,7 @@ FRAMES_PER_ACTION = 10.0
 
 animation_names = ['Walk']
 
+
 class Zombie:
     images = None
 
@@ -62,6 +63,8 @@ class Zombie:
 
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
+            game_world.remove_object(self)
+
 
 
 
