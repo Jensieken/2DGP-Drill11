@@ -182,7 +182,7 @@ class Boy:
             game_world.add_collision_pair('boy:ball', None, ball)
 
     def get_bb(self):
-        return self.x - 20, self.y - 50, self.x + 20, self.y + 50
+        return self.x - 20, self.y - 40, self.x + 20, self.y + 50
 
     def handle_collision(self, group, other):
         if group == 'boy:ball':
