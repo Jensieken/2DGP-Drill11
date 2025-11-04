@@ -65,7 +65,7 @@ class Zombie:
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
             self.hit += 1
-            if self.hit = 1:
+            if self.hit == 1:
                 self.size *= 0.5
 
             if self.hit > 1:
